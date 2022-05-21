@@ -58,14 +58,17 @@ form button:hover{
 }
 
 .delete-button, .complete-button{
-    color:azure;
+    color:azure;    
     background:rgb(241, 157, 30);
     padding: 1rem;
     border-color: rgb(238, 255, 0);
     cursor: pointer;
     font-size: 0.5rem;
+    transition: all 0.3s ease;
 }
-
+.todo-botton{
+    transition: all 0.3s ease;
+}
 .complete-button{
     background-color: rgb(83, 224, 83);
 }
@@ -86,4 +89,40 @@ form button:hover{
 .fall{
     transform: translateY(8rem) rotateZ(20deg);
     opacity: 0;
+}
+
+select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+.select{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.filter-todos{
+    margin: 0% 20%;
+}
+select{
+    color:rgb(197, 147, 8);
+    width: 10rem;
+    cursor: pointer;
+    padding: 0.4rem;
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    background:rgb(202, 199, 29);
+    top:0;
+    right:0;
+    padding:0.5rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.select:hover::after{
+    background: rgb(241, 157, 30);
+    color:white;
 }
